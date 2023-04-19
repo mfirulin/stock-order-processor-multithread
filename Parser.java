@@ -57,7 +57,7 @@ public class Parser {
         Set<Order> addOrders = new HashSet<>();
         Set<Order> deleteOrders = new HashSet<>();
 
-        spliterator.forEachRemaining((line) -> {     
+        spliterator.forEachRemaining(line -> {     
             if (line.startsWith("\t<A")) {
                 addOrders.add(parseAddOrderLine(line));
             } else if (line.startsWith("\t<D")) {

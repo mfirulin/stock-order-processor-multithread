@@ -71,7 +71,7 @@ public class Sorter {
     private static Map<String, Book> sortPart(Spliterator<Order> spliterator) {
         Map<String, Book> books = new HashMap<>();
 
-        spliterator.forEachRemaining((order) -> {
+        spliterator.forEachRemaining(order -> {
             Book book = books.get(order.book);
             if (book == null) {
                 book = new Book(order.book);
